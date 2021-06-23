@@ -11,6 +11,7 @@ body {
     color: #404040;
     background-image: url(../images/silverware.jpg);
     background-color: #FFFFA8;
+   background-attachment: fixed;
 }
 
 body a {
