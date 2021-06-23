@@ -139,3 +139,7 @@ body div.header_section {
         width: 270px;
         border: 5px solid #c97d84;
       }
+.firstcharacter {
+  color: #903;
+  font-family: Georgia;
+  }
