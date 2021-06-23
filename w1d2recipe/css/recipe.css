@@ -11,6 +11,7 @@ body {
     background: #fff;
     color: #404040;
     background-image: url(../images/silverware.jpg);
+    background-color: #FFFFA8;
 }
 
 body a {
@@ -100,7 +101,7 @@ body ul {
 }
 
 .footer {
-    text-align: right;
+    text-align: left;
     position: absolute;
     bottom: 0;
     width: 100%;
