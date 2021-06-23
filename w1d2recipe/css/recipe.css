@@ -21,7 +21,7 @@ body ul {
     list-style-image: url(../images/pie_icon.gif);
 }
 
-.header_panel {
+.header_panel span {
     background: #F0F0F0;
     color: #A4A400;
     font-family: Lucida Sans Unicode, Helvetica, Aria, sans-serif;
@@ -34,6 +34,7 @@ body ul {
 
 .header_panel.top_header {
     text-align: center;
+    
 }
 
 .content {
@@ -100,7 +101,6 @@ body ul {
 }
 
 .footer {
-    text-align: right;
     position: absolute;
     bottom: 0;
     width: 100%;
