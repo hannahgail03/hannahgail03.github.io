@@ -8,9 +8,6 @@ body {
     padding: 0;
     background: url(../images/background.png);
 }
-h1{
-font-size: 30pt;
-}
 #banner {
     text-align: center;
     height: 50px;
@@ -18,13 +15,14 @@ font-size: 30pt;
 }
 
 #movie-name {
-    font-size: 24pt;
-    font-weight: 700;
     font-family: Tahoma, Verdana;
     text-align: center;
     text-shadow: #999999 3px 3px;
 }
-
+h1{
+ font-size: 25pt;
+    font-weight: 700;
+}
 .container {
     align-items: center;
     justify-content: center;
