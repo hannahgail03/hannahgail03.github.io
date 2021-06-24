@@ -50,9 +50,13 @@ body {
     border-bottom-right-radius: 20px;
 }
 
-#certificates {
-    opacity: .5;
-    float: right;
+#validators {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+  opacity: 70%;
 }
 
 #left-container {
