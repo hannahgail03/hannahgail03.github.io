@@ -9,9 +9,12 @@ html {
   text-align: center;
 }
 .menus {
+ 
   background-color: #2F4F4F;
+   
   display: flex;
   flex-direction: row;
+
 }
 
 .container {
@@ -29,26 +32,26 @@ html {
 
  
 }
-.flex-container{
+.grid-container{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
-    height:250px;    
+    height:300px;    
 }
-.flex-item-left {
+.grid-item-left {
   background-color: #AAAAAA;
 }
 
-.flex-item-center {
+.grid-item-center {
     background-color: #BBBBBB;
     grid-column: span 2;
 }
 
-.flex-item-right {
+.grid-item-right {
   background-color: #CCCCCC;
 }
 
 @media (max-width: 600px) {
-    .flex-container {
+    .grid-container {
           grid-auto-flow: column;
           grid-template-rows: 1fr 1fr;
         grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
