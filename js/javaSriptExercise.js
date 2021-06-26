@@ -17,6 +17,7 @@ function max(a, b) {
   };
 }
 console.log("Expected output of max(20,10) is 20  " + myFunctionTest(20, max(20, 10)));
+console.log("Expected output of max(20,10) is 10  " + myFunctionTest(10, max(20, 10)));
 
 /* max3 takes 3 numbers as arguments and returns the largest */
 function maxOfThree(a, b, c) {
@@ -41,8 +42,8 @@ for (var i = 0; i < vowelArr.length; i++) {
 }
 	return res;
 }
-console.log("Expected output of isVowel('Apple') is A  " + myFunctionTest(true, isVowel('Apple')));
-console.log("Expected output of isVowel('Hannah') is H  " + myFunctionTest(false, isVowel('Hannah')));
+console.log("Expected output of isVowel('Apple') is A  return true " + myFunctionTest(true, isVowel('Apple')));
+console.log("Expected output of isVowel('Hannah') is H  return false " + myFunctionTest(false, isVowel('Hannah')));
 
 
 
@@ -55,6 +56,7 @@ console.log("Expected output of isVowel('Hannah') is H  " + myFunctionTest(false
 		    	return reversedString;
 	}
 console.log("Expected output of reverse('Hello') is olleH  " + myFunctionTest('olleH', reverse('Hello')));
+console.log("Expected output of reverse('Hello') is Hello  " + myFunctionTest('Hello', reverse('Hello')));
 
 //Write a function findLongestWord() that takes an array of words and returns the length of the longest one.
 function findLongestWord(strArray){
@@ -67,6 +69,7 @@ function findLongestWord(strArray){
   return longestWord;
 }
 console.log("Expected output of findLongestWord(['Hello','this','is','HannahGail']) is 10 " + myFunctionTest(10, findLongestWord(['Hello','this','is','HannahGail'])));
+console.log("Expected output of findLongestWord(['Hello','this','is','HannahGail']) is 9 " + myFunctionTest(9, findLongestWord(['Hello','this','is','HannahGail'])));
 
 
 
@@ -86,6 +89,7 @@ function filterLongWords(strArray,num) {
   return longerWord.toString();
 }
  	console.log("Expected output of findLongestWord(['Hello','this','is','HannahGail'],9) is HannahGail " + myFunctionTest('HannahGail',filterLongWords(['Hello','this','is','HannahGail'],9)));	
+  console.log("Expected output of findLongestWord(['Hello','this','is','HannahGail'],10) is HannahGail " + myFunctionTest('HannahGail',filterLongWords(['Hello','this','is','HannahGail'],10)));  
 
 
  	 	const a=[1,3,5,3,3];
