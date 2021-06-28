@@ -1,0 +1,22 @@
+textarea {
+    text-align: right;
+    font-size: 12pt;
+}
+.textUnderline {
+	text-decoration: underline;
+}
+.hundredollar{
+		 background: url(../images/hundred-dollar-bill.jpg);
+}
+#validators {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+  opacity: 90%;
+}
+h1,fieldset {
+	  text-shadow: 2px 2px white;
+	  font-weight: Bold;
+
+}
