@@ -1,0 +1,44 @@
+#space{
+	widht:100px;
+}
+.navbar {
+    background-color: #28a1e6;
+}
+.navbar .title  {
+    color: white;
+    padding: 1em;
+    margin-right: 3em;
+}
+.navtext{
+    color: white;
+    padding: 0.6em;
+    margin: 0 1em;
+	border-left: 1px solid white !important;
+}
+.greeting {
+    color: white;
+}
+#btnright{
+background: white;
+ margin-right: 1em;
+}
+.col {
+    padding: 1em;
+}
+
+.buttons {
+    text-align: right;
+}
+
+.buttons button {
+    margin: 0 1em;
+}
+
+#validators {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+  opacity: 70%;
+}
