@@ -1,11 +1,11 @@
 describe('sum', () => {
-    it('adds 20 and 10 into 30', () => {
+    it('adds 20 and 10 equals 30', () => {
         assert.strictEqual(30, sum([20, 10]));
     });
 });
 
 describe('multiply', () => {
-    it('multiply 20 and 10 into 200', () => {
+    it('multiply 20 and 10 equals 200', () => {
         assert.strictEqual(200, multiply([20, 10]));
     });
 });
@@ -32,11 +32,6 @@ function multiply(arr)
   return !arr ? undefined : arr.reduce(function (acc, elem) {  return acc * elem; }, 1);
 }
 function reverse(str) {
-    if (str === undefined) return undefined;
-    str = (' ' + str).slice(1);
-    return str.split('').map((_, i, array) => array[array.length - i -1]).join('');
-}
-function computeReverse (str) {
     if (str === undefined) return undefined;
     str = (' ' + str).slice(1);
     return str.split('').map((_, i, array) => array[array.length - i -1]).join('');
