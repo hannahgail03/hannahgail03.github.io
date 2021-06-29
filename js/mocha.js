@@ -12,13 +12,13 @@ describe('multiply', () => {
 
 
 describe('reverse', () => {
-    it('reverses a number (previous type conversion)', () => {
+    it('reverses a number 123 to 321', () => {
         assert.strictEqual('321', reverse(123));
     });
 });
 
 describe('filterLongWords', () => {
-    it('returns [\'Hannah Gail\'] for ([\'Hannah Gail\', \'a\', \'\'], 2) input', () => {
+    it('returns Hannah Gail for ([Hannah Gail,a,], 2) input', () => {
         expect(filterLongWords(['Hannah Gail', 'a', ''], 2)).to.have.same.members(['Hannah Gail']);
     });
    
@@ -36,6 +36,12 @@ function reverse(str) {
     str = (' ' + str).slice(1);
     return str.split('').map((_, i, array) => array[array.length - i -1]).join('');
 }
+function computeReverse (str) {
+    if (str === undefined) return undefined;
+    str = (' ' + str).slice(1);
+    return str.split('').map((_, i, array) => array[array.length - i -1]).join('');
+}
+
 
 function filterLongWords(arrayOfWords, i) {
     if (!arrayOfWords || typeof i !== "number") return undefined;
