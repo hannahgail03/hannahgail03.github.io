@@ -2,8 +2,8 @@ describe('sum', () => {
     it('adds 20 and 10 into 30', () => {
         assert.strictEqual(30, sum([20, 10]));
     });
-    it('adds 20, 10 and 3.5 into 33.5', () => {
-        assert.strictEqual(33.5, sum([20, 10, 3.5]));
+    it('adds 20, 10 and 14.5 into 44.5', () => {
+        assert.strictEqual(44.5, sum([20, 10, 14.5]));
     });
     it('returns 0 to empty array input', () => {
         assert.strictEqual(0, sum([]));
@@ -18,7 +18,7 @@ describe('reverse', () => {
         assert.strictEqual('denifednu', reverse('undefined'));
     });
     it('reverses a number (previous type conversion)', () => {
-        assert.strictEqual('4321', reverse(1234));
+        assert.strictEqual('321', reverse(123));
     });
     it('returns empty string for empty string input', () => {
         assert.strictEqual('', reverse(''));
@@ -29,20 +29,20 @@ describe('reverse', () => {
 });
 
 describe('filterLongWords', () => {
-    it('returns [\'nene\'] for ([\'nene\', \'a\', \'\'], 2) input', () => {
-        expect(filterLongWords(['nene', 'a', ''], 2)).to.have.same.members(['nene']);
+    it('returns [\'Hannah Gail\'] for ([\'Hannah Gail\', \'a\', \'\'], 2) input', () => {
+        expect(filterLongWords(['Hannah Gail', 'a', ''], 2)).to.have.same.members(['Hannah Gail']);
     });
-    it('returns [1234] for ([1234, \'art\', \'tar\'], 2) input', () => {
-        expect(filterLongWords([1234, 'art', 'tar'], 3)).to.have.same.members([1234]);
+    it('returns [123] for ([123, \'art\', \'tar\'], 2) input', () => {
+        expect(filterLongWords([123, 'art', 'tar'], 3)).to.have.same.members([123]);
     });
-    it('returns empty array for ([1234, \'art\', \'tar\'], 6) input', () => {
-        expect(filterLongWords([1234, 'art', 'tar'], 6)).to.have.same.members([]);
+    it('returns empty array for ([123, \'art\', \'tar\'], 6) input', () => {
+        expect(filterLongWords([123, 'art', 'tar'], 6)).to.have.same.members([]);
     });
     it('returns empty array for empty array input', () => {
         expect(filterLongWords([], 5)).to.have.same.members([]);
     });
     it('returns undefined for non-number i input', () => {
-        assert.strictEqual(undefined, filterLongWords([1234, 'art', 'tar'], 'r'));
+        assert.strictEqual(undefined, filterLongWords([123, 'art', 'tar'], 'r'));
     });
     it('returns undefined for undefined input', () => {
         assert.strictEqual(undefined, filterLongWords(undefined, 0));
