@@ -29,7 +29,7 @@ function sum(arr) {
 }
 function multiply(arr)
 {
-  return !arr ? undefined : arr.reduce(function (acc, elem) { return acc * elem; }, 0);
+  return !arr ? undefined : arr.reduce(function (acc, elem) {  return acc * elem; }, 1);
 }
 function reverse(str) {
     if (str === undefined) return undefined;
