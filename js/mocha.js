@@ -4,6 +4,13 @@ describe('sum', () => {
     });
 });
 
+describe('multiply', () => {
+    it('multiply 20 and 10 into 200', () => {
+        assert.strictEqual(200, multiply([20, 10]));
+    });
+});
+
+
 describe('reverse', () => {
     it('reverses a number (previous type conversion)', () => {
         assert.strictEqual('321', reverse(123));
@@ -20,7 +27,10 @@ describe('filterLongWords', () => {
 function sum(arr) {
     return !arr ? undefined : arr.reduce(function (acc, elem) { return acc + elem; }, 0);
 }
-
+function multiply(arr)
+{
+  return !arr ? undefined : arr.reduce(function (acc, elem) { return acc * elem; }, 0);
+}
 function reverse(str) {
     if (str === undefined) return undefined;
     str = (' ' + str).slice(1);
