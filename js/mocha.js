@@ -32,17 +32,17 @@ describe('filterLongWords', () => {
     it('returns [\'Hannah Gail\'] for ([\'Hannah Gail\', \'a\', \'\'], 2) input', () => {
         expect(filterLongWords(['Hannah Gail', 'a', ''], 2)).to.have.same.members(['Hannah Gail']);
     });
-    it('returns [123] for ([123, \'art\', \'tar\'], 2) input', () => {
-        expect(filterLongWords([123, 'art', 'tar'], 3)).to.have.same.members([123]);
+    it('returns [123] for ([123, \'rands\', \'rickels\'], 2) input', () => {
+        expect(filterLongWords([123, 'rands', 'rickels'], 3)).to.have.same.members([123]);
     });
-    it('returns empty array for ([123, \'art\', \'tar\'], 6) input', () => {
-        expect(filterLongWords([123, 'art', 'tar'], 6)).to.have.same.members([]);
+    it('returns empty array for ([123, \'rands\', \'rickels\'], 6) input', () => {
+        expect(filterLongWords([123, 'rands', 'rickels'], 6)).to.have.same.members([]);
     });
     it('returns empty array for empty array input', () => {
         expect(filterLongWords([], 5)).to.have.same.members([]);
     });
     it('returns undefined for non-number i input', () => {
-        assert.strictEqual(undefined, filterLongWords([123, 'art', 'tar'], 'r'));
+        assert.strictEqual(undefined, filterLongWords([123, 'rands', 'rickels'], 'r'));
     });
     it('returns undefined for undefined input', () => {
         assert.strictEqual(undefined, filterLongWords(undefined, 0));
