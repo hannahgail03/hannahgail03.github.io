@@ -1,0 +1,39 @@
+.control-panel {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 15em;
+    max-width: 200px;
+}
+#start {
+    width: 80px;
+    color:white;
+    background-color: #013220;
+}
+.footer {
+    height: 50px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: right;
+    opacity: 70%;
+}
+.footer>div {
+              padding: 15px;
+}
+
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #387623;
+}
+
+
+.control-panel > input {
+    max-width: 200px;
+    margin-bottom: 1em;
+}
