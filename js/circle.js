@@ -1,3 +1,4 @@
+"use strict";
 const myCircle = () => {
     const circleWidth = parseInt($('input#width')[0].value);
     const growthAmount = parseInt($('input#growth-amount')[0].value);
