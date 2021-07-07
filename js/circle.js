@@ -1,31 +1,32 @@
 "use strict";
 const myCircle = () => {
-    const circleWidth = parseInt($('input#width')[0].value);
-    const growthAmount = parseInt($('input#growth-amount')[0].value);
-    const growRate = parseInt($('input#grow-rate')[0].value);
+    const cwidth = parseInt($('input#width')[0].value);
+    const growth = parseInt($('input#growth-amount')[0].value);
+    const rate = parseInt($('input#grow-rate')[0].value);
     const numberOfCircles = parseInt($('input#number-circles')[0].value);
-
-    for (let i = 0; i < numberOfCircles; i++) {
-        drawCircle(circleWidth, growthAmount, growRate);
+    let i = 0;
+    while (i < numberOfCircles) {
+        drawCircle(cwidth, growth, rate);
+        i++;
     }
 }
 
-const drawCircle = (circleWidth, growthAmount, growRate) => {
+const drawCircle = (cwidth, growth, rate) => {
     let opacityInterval = null;
     const circleIn = circle => {
         opacityInterval = setInterval(() => {
             circle.css('opacity', (idx, previous) => previous * 0.9);
-        }, growRate/2);
+        }, rate/2);
     };
     const circleOut = circle => {
         clearInterval(opacityInterval);
         opacityInterval = null;
         circle.css('opacity', '100%');
     };
-    let newCircle = circleElement(circleWidth);
+    let newCircle = circleElement(cwidth);
     
     $('body').prepend(newCircle); 
-    let interval = setInterval(growCircle, growRate, newCircle, growthAmount);
+    let interval = setInterval(growCircle, rate, newCircle, growth);
     newCircle.click(() => {
         clearInterval(interval);
         newCircle.remove();
@@ -34,7 +35,7 @@ const drawCircle = (circleWidth, growthAmount, growRate) => {
 };
 
 let circleId = 0;
-const circleElement = circleWidth => {
+const circleElement = cwidth => {
     const randomColor = max => Math.floor((Math.random() * max)); 
     const genLeft = circleId => {
         return $(document).width() / 2 + (((-1) ** circleId) * 10 * circleId);
@@ -50,7 +51,7 @@ const circleElement = circleWidth => {
     let newElem = $('<div>', {id: 'circle' + circleId++,class: 'circle'
     });
     console.log(newElem);
-    newElem.css('width', circleWidth).css('height', circleWidth)
+    newElem.css('width', cwidth).css('height', cwidth)
     .css('left', function(idx, previous) {
         return genLeft(circleId) + 'px';
     }).css('top', function(idx, previous) {
@@ -59,14 +60,14 @@ const circleElement = circleWidth => {
     return newElem;
 };
 
-const growCircle = (circle, growthAmount) => {
+const growCircle = (circle, growth) => {
     circle.css('width', function(idx, previous) {
-        return parseInt(previous) + growthAmount + 'px';
+        return parseInt(previous) + growth + 'px';
     }).css('height', function(idx, previous) {
-        return parseInt(previous) + growthAmount + 'px';
+        return parseInt(previous) + growth + 'px';
     }).css('top', function(idx, previous) {
-        return parseInt(previous) - (growthAmount/2) + 'px';
+        return parseInt(previous) - (growth/2) + 'px';
     }).css('left', function(idx, previous) {
-        return parseInt(previous) - (growthAmount/2) + 'px';
+        return parseInt(previous) - (growth/2) + 'px';
     });
 };
